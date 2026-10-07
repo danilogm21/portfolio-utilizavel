@@ -1031,11 +1031,18 @@ outline: none;}
     color: white; 
     animation: cursor 1.0s infinite;
 }
- 
-/*RESPONSIVIDADE*/
+
+
+/* Evita barra de rolagem horizontal no site inteiro */
+html, body {
+    overflow-x: hidden; 
+}
+
+/*hr */
 hr {
     width: 90%;
     max-width: 800px;
+    margin: 50px auto; 
 }
 
 /*Tablets*/
@@ -1044,6 +1051,7 @@ hr {
         width: 90%;
         left: 50%;
         padding: 10px 20px;
+        white-space: nowrap;
     }
     
     .curriculo-download {
@@ -1052,7 +1060,7 @@ hr {
     }
 
     .container-frases {
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         flex-direction: column;
         align-items: center;
@@ -1063,112 +1071,277 @@ hr {
     .container-frases h1 {
         margin-top: 50px;
         margin-left: 0;
+        text-align: center;
+        width: 100%;
     }
 
     .links {
         margin-left: 0;
         margin-top: 50px;
         padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .primeira-skill {
         width: 90%;
     }
+
+    .linha-contatos {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container-pastas {
+        width: 100%;
+        padding: 0 20px;
+    }
 }
 
-/*celulares*/
+    /*Celulares*/
 @media (max-width: 768px) {
+    /*Símbolos de fundo*/
+    .simbolo-1 { font-size: 40px; top: 10%; }
+    .simbolo-2 { font-size: 80px; top: 50%; right: 2%; }
+    .simbolo-3 { font-size: 60px; top: 85%; }
+    .simbolo-4 { font-size: 40px; top: 30%; right: 5%; }
+    .simbolo-5 { font-size: 50px; top: 45%; left: 5%; }
+
+    /*Cabeçalho e Botão CV*/
     .header {
         position: relative;
         top: 0;
-        left: 0;
+        left: auto;
         transform: none;
         height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         margin: 20px auto;
-        padding: 10px;
+        padding: 15px 10px;
+        gap: 10px;
+        width: 90%;
     }
 
     .header a {
-        padding: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        text-align: center;
     }
 
     .curriculo-download {
         position: relative;
-        right: 0;
+        right: auto;
+        left: auto;
         margin: 20px auto;
         display: flex;
+        justify-content: center;
     }
 
+    /*Biografia*/
     .biografia {
         flex-direction: column;
         text-align: center;
         gap: 40px;
         padding: 50px 5%;
+        justify-content: center;
+        align-items: center;
     }
 
     .biografia h1 {
-        font-size: 60px; 
+        font-size: 50px;
         letter-spacing: 2px;
+        text-align: center;
     }
 
     .biografia span {
         margin-left: 0;
-        font-size: 16px;
+        font-size: 14px;
+        display: inline-block;
     }
 
     .biografia img {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         height: auto;
         aspect-ratio: 3/4;
+        margin: 0 auto;
     }
 
+    .btn-bio {
+        margin: 25px auto 0 auto;
+        display: block;
+    }
+
+    /*Habilidades*/
+    #habilidades {
+        height: auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    #habilidades h1 {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .container-pastas {
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pasta {
+        margin: 0 auto;
+    }
+
+    /*Projetos*/
     .flexbox {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        align-items: center; 
+        width: 100%;
     }
 
     .P1, .P2, .P3, .P4 {
         width: 90vw;
-        max-width: 400px;
-        height: 230px;
-        margin: 20px auto 0;
+        max-width: 350px;
+        height: 200px;
+        margin: 0 auto;
+        background-position: center;
     }
 
     .container-div-esquerda, .container-div-direita {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
+        width: 100%;
     }
 
-    .contato, .contato2 {
+    .meio-github {
         width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .meio-github h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .meio-github img {
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    /*Skills / Carrossel*/
+    .conteudo-skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo-skill h2 {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .conteudo-skill p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .primeira-skill {
         height: auto;
-        padding: 30px 10px;
+        padding: 40px 10px;
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .botao-carrossel {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .link1, .link2, .link3 {
+        justify-content: center; 
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #Redes a {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #Redes img {
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    /*Contato*/
+    #contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .linha-contatos {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        padding: 0 5%;
+        align-items: center; 
+    }
+
+    .contato, .contato2, .mensagem-sucesso {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 30px 15px;
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     input, textarea {
         width: 90%;
+        text-align: center; 
+        margin: 0 auto 20px auto; 
+    }
+
+    .botao-enviar {
+        margin: 0 auto;
     }
 
     .num-hover {
         font-size: 20px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
-    #Redes a {
-        font-size: 36px; 
+    .contato2 p {
+        font-size: 16px;
+        text-align: center;
     }
 
-    #Redes img {
-        width: 30px;
-    }
-
-    .conteudo-skill h2 {
-        font-size: 24px;
-        flex-direction: column;
+    /*Rodapé*/
+    .rodape {
+        font-size: 20px;
+        height: 150px;
+        margin-top: 50px;
+        text-align: center;
     }
 }

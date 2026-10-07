@@ -33,14 +33,13 @@
     <a href="#contato">Contato</a>
   </header>
   <a href="Curriculo-DaniloGomes.pdf" download="Curriculo-DaniloGomes.pdf" class="curriculo-download">
-    <h1>Download CV</h1>
+    <h1>Meu Currículo</h1>
     <div class="icone-download">
       <svg class="seta-cv" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 5v14M19 12l-7 7-7-7"/>
       </svg>
     </div>
   </a>
-  </div>
   <section id="sobre-mim" class="biografia">
     <div>
       <h1>
@@ -155,7 +154,7 @@
           <a href="https://www.linkedin.com/in/danilo-gomes-384072388/?isSelfProfile=true">Linkedin</a> <img src="linkedin.png" alt="">
         </div>
         <div class="link3">
-          <a href="">Gmail</a> <img src="contacts.png" alt="">
+          <a href="danilogomes.deveweb@gmail.com">Gmail</a> <img src="contacts.png" alt="">
         </div>
       </div>
     </div>
@@ -324,7 +323,7 @@
   <div class="linha-contatos">
 <form id="meu-formulario" action="https://formspree.io/f/mljdqkor" method="POST" class="contato">
   <input type="text" name="Nome" placeholder="NOME" class="input-linha" required>
-  <input type="email" name="Email" placeholder="EMAIL@EXEMPLO.COM" class="input-linha" required>
+  <input type="tel" name="Telefone" id="telefone" placeholder="+XX (XX) X XXXX-XXXX" class="input-linha" maxlength="20" oninput="mascara_telefone()" required>  <input type="email" name="Email" placeholder="EMAIL@EXEMPLO.COM" class="input-linha" required>
   <textarea name="Mensagem" placeholder="Escreva sua mensagem aqui:" class="input-linha" required></textarea>
   <button type="submit" class="botao-enviar">ENVIAR</button>
 </form>

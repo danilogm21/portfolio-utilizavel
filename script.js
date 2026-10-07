@@ -240,3 +240,53 @@ function typeRodape() {
 
 // Inicia a animação do rodapé
 typeRodape();
+
+//MÁSCARA DE TELEFONE 
+function mascara_telefone() {
+    var telefone = document.getElementById("telefone").value;
+    telefone = telefone.slice(0,20);
+
+    var telefone_formatado = document.getElementById("telefone").value;
+    
+    if (telefone_formatado[0] != "+") {
+        if (telefone_formatado[0] != undefined) {
+            document.getElementById("telefone").value = "+" + telefone_formatado[0];
+        }
+    }
+
+    if (telefone_formatado[3] != " ") {
+        if (telefone_formatado[3] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,3) + " " + telefone_formatado[3];
+        }
+    }
+
+    if (telefone_formatado[4] != "(") {
+        if (telefone_formatado[4] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,4) + "(" + telefone_formatado[4];
+        }
+    }
+
+    if (telefone_formatado[7] != ")") {
+        if (telefone_formatado[7] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,7) + ")" + telefone_formatado[7];
+        }
+    }
+
+    if (telefone_formatado[8] != " ") {
+        if (telefone_formatado[8] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,8) + " " + telefone_formatado[8];
+        }
+    }
+
+    if (telefone_formatado[10] != " ") {
+        if (telefone_formatado[10] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,10) + " " + telefone_formatado[10];
+        }
+    }
+
+    if (telefone_formatado[15] != "-") {
+        if (telefone_formatado[15] != undefined) {
+            document.getElementById("telefone").value = telefone_formatado.slice(0,15) + "-" + telefone_formatado[15];
+        }
+    }
+}
